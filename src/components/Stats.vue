@@ -2,15 +2,15 @@
   <div class="stats">
     <span class="stats__item">
       <i class="material-icons">remove_red_eye</i>
-      {{ data.views }}
+      {{ data.views || 0 }}
     </span>
     <span class="stats__item">
       <i class="material-icons">favorite_border</i>
-      {{ data.likes }}
+      {{ data.likes || 0 }}
     </span>
     <span class="stats__item">
       <i class="material-icons">mode_comment</i>
-      {{ data.comments }}
+      {{ data.comments || 0 }}
     </span>
   </div>
 </template>
