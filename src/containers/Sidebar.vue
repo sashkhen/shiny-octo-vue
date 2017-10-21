@@ -8,7 +8,7 @@
     </div>
     <div class="sidebar__item sidebar__item--separator"/>
     <div class="sidebar__item">
-      <p>Social Share bar</p>
+      <social-links />
     </div>
   </div>
 </template>
@@ -16,12 +16,14 @@
 <script>
 import AppTitle from '@/components/AppTitle';
 import Navigation from '@/components/Navigation';
+import SocialLinks from '@/components/SocialLinks';
 
 export default {
   name: 'sidebar',
   components: {
     AppTitle,
     Navigation,
+    SocialLinks,
   },
 
   computed: {},
@@ -48,6 +50,5 @@ export default {
 
 .sidebar__item--separator {
   flex: 1 1 auto;
-  background-color: rgba(0, 0, 0, .5);
 }
 </style>
