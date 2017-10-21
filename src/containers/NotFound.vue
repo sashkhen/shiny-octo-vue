@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <p>{{ name }}</p>
+    <p class="message">{{ name }}</p>
   </div>
 </template>
 
@@ -10,7 +10,7 @@ export default {
 
   data() {
     return {
-      name: 'Not Found',
+      name: 'Ooops there\'s nothing here',
     };
   },
 };
@@ -18,9 +18,15 @@ export default {
 
 <style scoped>
 .wrapper {
-  position: relative;
+  padding: 45px 45px 0 0;
+/*  position: relative;
   top: 50%;
   transform: translate(0, -50%);
-  background-color: rgba(0, 0, 0, .3);
+  background-color: rgba(0, 0, 0, .3);*/
+}
+.message {
+  text-align: left;
+  font-size: 24px;
+  color: black;
 }
 </style>

@@ -76,7 +76,7 @@ export default {
 
 <style scoped>
 .wrapper {
-  padding: 45px 80px 62px 0;
+  padding: 45px 80px 16px 0;
   text-align: left;
 }
 
