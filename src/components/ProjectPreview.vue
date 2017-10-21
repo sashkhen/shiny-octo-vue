@@ -1,10 +1,12 @@
 <!-- TO DO: snake_case -> camelCase -->
 <template>
   <div class="wrapper">
-    <div
+    <router-link
+      :to="link"
       class="project-preview"
       v-bind:style="{ backgroundImage: 'url(' + thumb + ')' }"
     />
+  </router-link>
   </div>
 </template>
 
@@ -18,6 +20,7 @@ export default {
 
   data() {
     const {
+      id,
       created_on,
       covers,
       name,
@@ -27,6 +30,7 @@ export default {
       date: this.getDate(created_on),
       thumb: covers[THUMB_SIZE],
       title: name.replace(/["']/g, ''),
+      link: `/projects/${id}`,
     };
   },
   methods: {

@@ -5,6 +5,7 @@ import Router from 'vue-router';
 import Home from '@/containers/Home';
 import Shop from '@/containers/Shop';
 import About from '@/containers/About';
+import Project from '@/containers/Project';
 import NotFound from '@/containers/NotFound';
 
 Vue.use(VueResource);
@@ -26,6 +27,11 @@ export default new Router({
       path: '/about',
       name: 'About',
       component: About,
+    },
+    {
+      path: '/projects/:id',
+      name: 'Project',
+      component: Project,
     },
     {
       path: '*',
