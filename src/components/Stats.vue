@@ -1,3 +1,4 @@
+<!-- DEPRECATED -->
 <template>
   <div class="stats">
     <span v-if="views" class="views">{{ views }}</span>

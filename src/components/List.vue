@@ -1,3 +1,4 @@
+<!-- DEPRECATED -->
 <template>
   <ul v-if="list" class="list">
     <item v-for="item in list" :item="item"></item>

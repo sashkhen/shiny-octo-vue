@@ -1,3 +1,4 @@
+<!-- DEPRECATED -->
 <template>
   <div id="gallery">
     <h1>{{ title }}</h1>

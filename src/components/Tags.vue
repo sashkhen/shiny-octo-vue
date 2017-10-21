@@ -1,3 +1,4 @@
+<!-- DEPRECATED -->
 <template>
   <ul class="list">
     <li v-for="tag in tags" class="item">

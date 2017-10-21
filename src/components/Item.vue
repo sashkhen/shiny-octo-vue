@@ -1,3 +1,4 @@
+<!-- DEPRECATED -->
 <template>
   <div class="item">
     <div class="image">

@@ -1,3 +1,4 @@
+<!-- DEPRECATED -->
 <template>
   <ul class="menu">
     <li v-for="item in items" :style="'--color :' + style.color">{{ item.title }}</li>
