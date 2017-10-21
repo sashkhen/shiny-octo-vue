@@ -35,11 +35,22 @@ export default {
 
 <style scoped>
 .list {
-  background-color: rgba(0, 0, 0, .1);
   text-align: left;
 }
 
-.list__item {}
+.list__item {
+  color: black;
+  font-size: 16px;
+}
 
-.list__link {}
+.list__link {
+  display: block;
+  padding: 0 0 16px;
+  opacity: 1;
+  transition: opacity .3s ease-out;
+}
+
+.list__link:hover {
+  opacity: .7;
+}
 </style>
