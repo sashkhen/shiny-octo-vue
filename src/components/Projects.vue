@@ -24,6 +24,7 @@ export default {
   data() {
     return {
       errorMsg: 'Something went wrong...',
+      projectsToShow: this.projects.slice(0, 8),
     };
   },
 };
@@ -31,8 +32,9 @@ export default {
 
 <style scoped>
 .projects {
-  margin-bottom: -45px;
-  text-align: left;
+  display: grid;
+  grid-template-columns: repeat(3, [col] 33.3%);
+  grid-template-rows: repeat(4, [row] auto);
 }
 
 .error {

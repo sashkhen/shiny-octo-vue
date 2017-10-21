@@ -45,32 +45,130 @@ export default {
 
 <style lang="sass" scoped>
 .wrapper
-  display: inline-flex
+  display: flex;
   align-items: stretch
-  width: 33.3%
-  margin: 0 0 45px 0
-  padding: 0 45px 0 0
-  height: 300px
 
-  &:first-child
-    width: 100%
-/*  float: left
+  &::after
+    content: ''
+    display: block
 
-  &:nth-child(5n+2),
-  &:nth-child(5n+3),
-  &:nth-child(5n+4)
-    height: 600px
+  &:nth-child(21n+1)
+    grid-column: 1 / span 3
+    &::after
+      padding-bottom: 55%
 
-  &:nth-child(5n+4)
-    margin-top: calc(-50%)
-    // transform: translate(0, 24%)
+  &:nth-child(21n+2)
+    grid-column: 1
+    &::after
+      padding-bottom: 100%
 
-  &:nth-child(5n+5)
-    width: 66.6%
-    height: 300px*/
+  &:nth-child(21n+3)
+    grid-column: 2
+    grid-row: span 2
+    &::after
+      padding-bottom: 200%
+
+  &:nth-child(21n+4)
+    grid-column: 3
+    grid-row: span 2
+    &::after
+      padding-bottom: 200%
+
+  &:nth-child(21n+5)
+    grid-column: 1
+    grid-row: span 2
+    &::after
+      padding-bottom: 200%
+
+  &:nth-child(21n+6)
+    grid-column: 2 / span 2
+    &::after
+      padding-bottom: 50%
+
+  &:nth-child(21n+7)
+    grid-column: 1
+    &::after
+      padding-bottom: 100%
+
+  &:nth-child(21n+8)
+    grid-column: 2
+    &::after
+      padding-bottom: 100%
+
+  &:nth-child(21n+9)
+    grid-column: 3
+    grid-row: span 2
+    &::after
+      padding-bottom: 200%
+
+  &:nth-child(21n+10)
+    grid-column: 1 / span 2
+    grid-row: span 2
+
+  &:nth-child(21n+11)
+    grid-column: 3
+    &::after
+      padding-bottom: 100%
+
+  &:nth-child(21n+12)
+    grid-column: 1
+    grid-row: span 2
+    &::after
+      padding-bottom: 200%
+
+  &:nth-child(21n+13)
+    grid-column: 2
+    grid-row: span 2
+    &::after
+      padding-bottom: 200%
+
+  &:nth-child(21n+14)
+    grid-column: 3
+    grid-row: span 2
+    &::after
+      padding-bottom: 200%
+
+  &:nth-child(21n+15)
+    grid-column: 1 / span 2
+    &::after
+      padding-bottom: 50%
+
+  &:nth-child(21n+16) // this one affects 13'th
+    grid-column: 3
+
+  &:nth-child(21n+17)
+    grid-column: 1
+    &::after
+      padding-bottom: 100%
+
+  &:nth-child(21n+18)
+    grid-column: 2
+    &::after
+      padding-bottom: 100%
+
+  &:nth-child(21n+19)
+    grid-column: 3
+    &::after
+      padding-bottom: 100%
+
+  &:nth-child(21n+20)
+    grid-column: 1
+    grid-row: span 2
+    &::after
+      padding-bottom: 100%
+
+  &:nth-child(21n+21) // this one affects 16'th
+    grid-column: 2 / span 2
+    grid-row: span 2
+    &::after
+      padding-bottom: 100%
+
+
 
 .project-preview
   flex: 1 1 auto
+  display: block
+  margin: 0 45px 45px 0
   background-size: cover
   background-position: center
   background-repeat: no-repeat

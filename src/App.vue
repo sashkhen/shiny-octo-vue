@@ -39,6 +39,11 @@ export default {
   }
 }
 
+html,
+body {
+  overflow: hidden; /* disable macOS scroll rubber effect */
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -58,5 +63,6 @@ a {
 .content {
   flex: 1 1 auto;
   overflow: auto;
+  -webkit-overflow-scrolling: touch;
 }
 </style>
