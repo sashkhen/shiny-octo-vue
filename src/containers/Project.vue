@@ -11,9 +11,14 @@
           <stats :data="project.stats" />
         </div>
       </div>
-      <div class="project__info">
+      <div v-if="project.fields.length" class="project__info">
         <div class="project__info__block">
           <tags :data="project.fields" />
+        </div>
+      </div>
+      <div v-if="project.fields.length" class="project__info">
+        <div class="project__info__block">
+          <go-back />
         </div>
       </div>
     </div>
@@ -23,6 +28,7 @@
 <script>
 import { mapGetters, mapActions } from 'vuex';
 import BehanceLink from '@/components/BehanceLink';
+import GoBack from '@/components/GoBack';
 import Stats from '@/components/Stats';
 import Tags from '@/components/Tags';
 
@@ -32,6 +38,7 @@ export default {
   name: 'project',
   components: {
     BehanceLink,
+    GoBack,
     Stats,
     Tags,
   },
