@@ -30,7 +30,10 @@ export default {
 </script>
 
 <style scoped>
-.projects {}
+.projects {
+  margin-bottom: -45px;
+  text-align: left;
+}
 
 .error {
   color: red;
