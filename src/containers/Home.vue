@@ -1,17 +1,39 @@
 <template>
   <div class="wrapper">
-    <p>{{ name }}</p>
+    <projects :projects="projects"/>
   </div>
 </template>
 
 <script>
+import Projects from '@/components/Projects';
+import { API_URL } from '@/constants';
+
 export default {
   name: 'home',
+  components: {
+    Projects,
+  },
 
   data() {
     return {
-      name: 'Home',
+      projects: null,
     };
+  },
+
+  beforeMount() {
+    this.getProjects();
+  },
+
+  methods: {
+    getProjects() {
+      this.$http
+        .get(API_URL).then((response) => {
+          this.projects = response.body.projects;
+        }, (response) => {
+          // error callback
+          console.error('Failed with: ', response); // eslint-disable-line no-console
+        });
+    },
   },
 };
 </script>
@@ -19,6 +41,5 @@ export default {
 <style scoped>
 .wrapper {
   padding: 0 80px 62px 0;
-  background-color: rgba(0, 0, 0, .3);
 }
 </style>

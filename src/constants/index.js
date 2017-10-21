@@ -1,7 +1,5 @@
-export const STYLE_VARS = {
-  colors: {
-    primary: 'rgb(53, 73, 94)',
-    accent: 'rgb(66, 185, 131)',
-    text: 'rgb(44, 62, 80)',
-  },
+export const API_URL = 'http://api.behance.net/v2/users/mr_lucky/projects?client_id=cThQ8I71tjkVrL56Z9MKxTuh0P3yjehV';
+
+export default {
+  API_URL,
 };

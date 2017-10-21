@@ -57,6 +57,6 @@ a {
 
 .content {
   flex: 1 1 auto;
-  background-color: rgba(0, 0, 0, .1);
+  overflow: auto;
 }
 </style>
