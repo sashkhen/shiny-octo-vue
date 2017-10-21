@@ -1,23 +1,24 @@
-<!-- DEPRECATED -->
 <template>
   <div class="stats">
-    <span v-if="views" class="views">{{ views }}</span>
-    <span v-if="likes" class="likes">{{ likes }}</span>
-    <span v-if="comments" class="comments">{{ comments }}</span>
+    <span class="stats__item">
+      <i class="material-icons">remove_red_eye</i>
+      {{ data.views }}
+    </span>
+    <span class="stats__item">
+      <i class="material-icons">favorite_border</i>
+      {{ data.likes }}
+    </span>
+    <span class="stats__item">
+      <i class="material-icons">mode_comment</i>
+      {{ data.comments }}
+    </span>
   </div>
 </template>
 
 <script>
 export default {
   name: 'stats',
-  props: ['stats'],
-  data() {
-    return {
-      views: this.stats.views,
-      likes: this.stats.appreciations,
-      comments: this.stats.comments,
-    };
-  },
+  props: ['data'],
 };
 </script>
 
@@ -27,29 +28,21 @@ export default {
   justify-content: flex-start;
   align-items: flex-start;
 }
-.stats span {
+.stats__item {
   flex: 0 0 auto;
-  padding: 0 8px 0 0;
-  cursor: pointer;
-  transition: opacity .3s ease-out;
-  opacity: .5;
+
+  display: flex;
+  align-items: center;
+  padding: 0 0 0 16px;
+
+  cursor: default;
+  color: rgba(0, 0, 0, .2);
+
+  font-size: 12px;
+}
+i {
+  cursor: default;
+  padding: 0 4px 0 0;
   font-size: 14px;
-  font-weight: 600;
-}
-.stats span:hover {
-  opacity: 1;
-}
-.stats span::before {
-  display: inline-block;
-  margin: 0 4px 0 0;
-}
-.views::before {
-  content: '@';
-}
-.likes::before {
-  content: '#';
-}
-.comments::before {
-  content: '%';
 }
 </style>

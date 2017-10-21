@@ -4,7 +4,7 @@
     <router-link
       :to="link"
       class="project-preview"
-      v-bind:style="{ backgroundImage: 'url(' + thumb + ')' }"
+      v-bind:style="{ backgroundImage }"
     />
   </router-link>
   </div>
@@ -31,6 +31,7 @@ export default {
       thumb: covers[THUMB_SIZE],
       title: name.replace(/["']/g, ''),
       link: `/projects/${id}`,
+      backgroundImage: `url(${covers[THUMB_SIZE]})`,
     };
   },
   methods: {
