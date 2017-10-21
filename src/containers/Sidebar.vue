@@ -1,8 +1,7 @@
 <template>
   <div class="sidebar">
     <div class="sidebar__item">
-      <p>Logo</p>
-      <p>Title</p>
+      <app-title />
     </div>
     <div class="sidebar__item">
       <navigation />
@@ -15,11 +14,13 @@
 </template>
 
 <script>
+import AppTitle from '@/components/AppTitle';
 import Navigation from '@/components/Navigation';
 
 export default {
   name: 'sidebar',
   components: {
+    AppTitle,
     Navigation,
   },
 
@@ -38,13 +39,11 @@ export default {
 
   flex: 0 0 280px;
   overflow: auto;
-  background-color: rgba(0, 0, 0, .2);
 }
 
 .sidebar__item {
   flex: 0 0 auto;
   padding: 0 50px;
-  background-color: rgba(0, 0, 0, .4);
 }
 
 .sidebar__item--separator {
