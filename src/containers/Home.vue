@@ -5,8 +5,9 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
+
 import Projects from '@/components/Projects';
-import { API_URL } from '@/constants';
 
 export default {
   name: 'home',
@@ -14,26 +15,12 @@ export default {
     Projects,
   },
 
-  data() {
-    return {
-      projects: null,
-    };
-  },
+  computed: mapGetters({
+    projects: 'allProjects',
+  }),
 
-  beforeMount() {
-    this.getProjects();
-  },
-
-  methods: {
-    getProjects() {
-      this.$http
-        .get(API_URL).then((response) => {
-          this.projects = response.body.projects;
-        }, (response) => {
-          // error callback
-          console.error('Failed with: ', response); // eslint-disable-line no-console
-        });
-    },
+  created() {
+    this.$store.dispatch('getAllProjects');
   },
 };
 </script>

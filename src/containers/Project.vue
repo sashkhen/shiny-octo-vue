@@ -1,30 +1,31 @@
 <template>
   <div class="wrapper">
-    <div v-if="project.id">{{ project.id }}</div>
+    <div v-if="project">{{ project.id }}</div>
   </div>
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex';
+
 export default {
   name: 'project',
 
-  data() {
-    return {
-      project: {
-        id: null,
-      },
-    };
-  },
+  computed: mapGetters({
+    project: 'currentProject',
+  }),
 
   beforeMount() {
     this.renderProject();
   },
 
   methods: {
+    ...mapActions([
+      'browseProject',
+    ]),
     renderProject() {
       const { id } = this.$route.params;
 
-      this.project.id = id;
+      this.browseProject(id);
     },
   },
 };
